@@ -1,0 +1,133 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+    <title>@ViewBag.Title</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="~/Content/Site.css" />
+    <link rel="stylesheet" href="~/Content/marquee.css" />
+    <link href="~/Content/gallery.css" rel="stylesheet" />
+
+
+    <script src="~/Scripts/jquery-1.9.1.min.js"></script>
+    <script src="~/Scripts/jquery.cycle.all.js"></script>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <meta name="description" content="@ViewBag.Description" />
+    <meta name="keywords" content="Ima-G-Nation,Vanderbijlpark,Ima-G,Applications Development,Project Management,ima,To bring the customer‘s imaginary business needs to business reality through innovation" />
+</head>
+
+<body class="body">
+
+    <div class="SideHeader">
+
+        <nav>
+
+            <ul>
+                @if (Request.IsAuthenticated)
+                {
+                    <li>@Html.ActionLink("Log Out", "Logout", "User")</li>
+                    
+                    string name = @Html.Encode(User.Identity.Name);
+                    <li>@Html.ActionLink(name,"#","#")</li>
+                    
+
+                    
+                }
+                else
+                {
+                    <li>@Html.ActionLink("Register", "Register", "User")</li>
+                    <li>@Html.ActionLink("Log In", "Login", "User")</li>
+                }
+            </ul>
+        </nav>
+    </div>
+
+    <header class="mainHeader">
+        <img src="~/Images/ima.png" />
+        <nav>
+            <ul>
+                @if (@ViewBag.Title == "Home")
+                {
+                    <li class="active" style="color:#fff;">@Html.ActionLink("Home", "Home", "Home")</li>
+                    <li>@Html.ActionLink("About", "About", "Home")</li>
+                    <li>@Html.ActionLink("Products/Services", "Product_Services", "Home")</li>
+                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                }
+                else if (@ViewBag.Title == "Contact")
+                {
+                    <li>@Html.ActionLink("Home", "Home", "Home")</li>
+                    <li>@Html.ActionLink("About", "About", "Home")</li>
+                    <li>@Html.ActionLink("Products/Services", "Product_Services", "Home")</li>
+                    <li class="active" style="color:#fff;">@Html.ActionLink("Contact", "Contact", "Home")</li>
+                }
+                else if (@ViewBag.Title == "About")
+                {
+                    <li>@Html.ActionLink("Home", "Home", "Home")</li>
+                    <li class="active" style="color:#fff;">@Html.ActionLink("About", "About", "Home")</li>
+                    <li>@Html.ActionLink("Products/Services", "Product_Services", "Home")</li>
+                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                }
+                else if (@ViewBag.Title == "Product_Services")
+                {
+                    <li>@Html.ActionLink("Home", "Home", "Home")</li>
+                    <li>@Html.ActionLink("About", "About", "Home")</li>
+                    <li class="active" style="color:#fff;">@Html.ActionLink("Products/Services", "Product_Services", "Home")</li>
+                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                }
+                else
+                {
+                    <li>@Html.ActionLink("Home", "Home", "Home")</li>
+                    <li>@Html.ActionLink("About", "About", "Home")</li>
+                    <li>@Html.ActionLink("Products/Services", "Product_Services", "Home")</li>
+                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                }
+
+            </ul>
+        </nav>
+
+    </header>
+    
+
+            @RenderSection("featured", required: false)
+
+
+            @Scripts.Render("~/bundles/jquery")
+            @RenderSection("scripts", required: false)
+
+            <div class="wrapper">
+
+                <div class="marquee">
+
+                    <p><a href="#">Dirafime Marketing and Distributions</a> | <a href="#">Kingdani Artists and Events Management</a> | <a href="#">N12 IT Securities</a> | <a href="#">Exomedus</a></p>
+                    <p>
+                        Copyright © Ima-G-Nation Trading (Pty) Ltd 2012 |
+                        @Html.ActionLink("Home", "Home", "Home") |
+                        @Html.ActionLink("About", "About", "Home") |
+                        @Html.ActionLink("Portfolio", "Portfolio", "Home") |
+                        @Html.ActionLink("Contact", "Contact", "Home")   |
+
+
+                        @Html.ActionLink("Login", "Login", "User")|
+                        @Html.ActionLink("Register", "Register", "User")
+                        @*@ViewBag.Vision Ima-G-Nation*@
+                    </p>
+
+
+                </div>
+
+            </div>
+            
+           
+
+
+
+            @*<footer class ="mainFooter">
+                    <a href ="#" title ="Ima-G-Nation Trading (Pty) Ltd">
+                        <p>
+
+
+                       </p>
+                    </a>
+                </footer>*@
+
+</body>
+</html>

@@ -1,0 +1,51 @@
+﻿@{
+    ViewBag.Title = "Home";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    
+    
+  
+}
+@section featured{
+ <script type="text/javascript">
+     $('#slider').cycle({
+         fx:     'all', 
+         timeout: 3000, 
+         speed:   200,
+         pause: 1
+     });
+</script>
+
+
+   
+        <div id="slider">
+            <a class="linkSliderOne">
+                <table width="500" height="410">
+                    <tr>
+                        <td width="100%">
+                            <img src="~/Images/ima.png" />
+                        </td>
+                        <td><h2>Welcome to Ima-G-Nation</h2></td>
+
+                    </tr>
+                </table>
+                
+            </a>
+
+            <a class="linkSliderTwo">
+
+                <h2>Vision</h2>
+            </a>
+            <a class="linkSliderThree">
+
+                <h2>Community Responsibility</h2>
+                <br />
+                <p>
+                    As part of our strategic intentions; Ima-G-Nation intends to work with well- established companies so it can gain more experience, however, Ima-G-Nation will always involve Small and Medium Enterprises in large-scale projects in areas where the client’s requirements are less complex.
+                    Ima-G-Nation enthusiastically participates in projects like the Young African Entrepreneurs (YAE) network where Ima-G-Nation is head in helping and assisting entrepreneurs in the community in Enterprise Development and Capacity Building.
+                </p>
+                
+                
+            </a>
+    </div>
+
+    }

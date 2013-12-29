@@ -1,0 +1,76 @@
+﻿
+#wrapper{
+    background-color:rgba(0, 0, 0, 0.61);
+    height:420px;
+    width:944px;
+    border-radius: 5px;
+    -mos-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    margin-top:.2%;
+}
+
+#slider{
+    float:left;
+    height:96%;
+    width:96%;
+    background-image:url("../Images/ima.png");
+    background-position:center;
+    background-repeat:no-repeat;
+    background-size:944px 420px;
+    margin-right:2%;
+    margin-top:.6%;
+    border:1px;
+}
+.linkSliderOne{
+     background-color:rgba(0, 0, 0, 0.99);
+    height:420px;
+    width:944px;
+    border-radius: 5px;
+    -mos-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    margin-top:.2%;
+}
+.linkSliderOne h2{
+    margin-left:2%;
+}
+.linkSliderOne:hover{
+    background-color:rgba(126, 67, 37, 0.99);
+}
+
+.linkSliderTwo{
+     background-color:rgba(8, 63, 69, 0.99);
+    height:420px;
+    width:944px;
+    border-radius: 5px;
+    -mos-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    margin-top:.2%;
+}
+.linkSliderTwo h2{
+    margin-left:2%;
+}
+.linkSliderTwo:hover{
+    background-color:rgba(126, 167, 237, 0.99)
+}
+
+.linkSliderThree{
+    background-image:url("../Images/IMG-20131229-WA0001.jpg");
+    height:420px;
+    width:944px;
+    border-radius: 5px;
+    -mos-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    margin-top:.2%;
+}
+.linkSliderThree h2{
+    margin-left:2%;
+}
+.linkSliderThree p{
+    margin-left:2%;
+    margin-right:2%;
+    margin-top:-3.7%;
+}
+.linkSliderThree:hover{
+    background-color:rgba(46, 11, 11, 0.64);
+    color:#000;
+}
